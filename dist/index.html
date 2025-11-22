@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premium Slide Templates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+      #sidebar {
+        width: 300px;
+        background: #1e293b;
+        color: white;
+        overflow-y: auto;
+        flex-shrink: 0;
+      }
+      #main {
+        flex-grow: 1;
+        background: #e2e8f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .category-header {
+        padding: 1rem;
+        font-weight: bold;
+        background: #0f172a;
+        position: sticky;
+        top: 0;
+      }
+      .template-item {
+        padding: 0.75rem 1rem;
+        cursor: pointer;
+        border-bottom: 1px solid #334155;
+        transition: background 0.2s;
+      }
+      .template-item:hover,
+      .template-item.active {
+        background: #334155;
+      }
+      #slide-viewport {
+        width: 1280px;
+        height: 720px;
+        background: white;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+        transform-origin: center center;
+        transition: transform 0.2s;
+      }
+      #controls {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-BOOWR6jM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BKxf1a1F.css">
+  </head>
+  <body>
+    <div id="sidebar">
+      <div class="category-header">Slide Templates</div>
+      <div id="template-list">
+        <!-- Templates will be injected here -->
+      </div>
+    </div>
+    <div id="main">
+      <div id="slide-viewport">
+        <!-- Selected slide will be injected here -->
+      </div>
+      <div id="controls">
+        <button class="btn btn-outline" id="prev-btn">Previous</button>
+        <button class="btn btn-outline" id="next-btn">Next</button>
+        <button class="btn btn-primary" id="copy-btn">Copy HTML</button>
+      </div>
+    </div>
+  </body>
+</html>
